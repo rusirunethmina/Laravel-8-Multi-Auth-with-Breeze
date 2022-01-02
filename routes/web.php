@@ -24,10 +24,14 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
+
 //admin routes
 Route::prefix('admin')->group(function () {
 
-    Route::get('/login', [AdminController::class, 'login'])->name('login.form');
+    Route::get('/login', [AdminController::class, 'loginView'])->name('login.form');
+    Route::get('/register', [AdminController::class, 'register'])->name('register.form');
     Route::post('/login/owner', [AdminController::class, 'login'])->name('admin.login');
-    Route::get('/dashboard', [AdminController::class, 'daashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'daashboard'])->name('admin.dashboard')->middleware('admin');
+    Route::get('/logout', [AdminController::class, 'Adminlogout'])->middleware('admin')->name('admin.logout');
 });
+

@@ -238,7 +238,7 @@
                     <li><a href=" "><span><i class="fas fa-cogs"></i></span> Password Change</a></li>
                     <li>
 
-                        <a href=" "><span><i class="fas fa-unlock-alt"></i></span> Logout</a>
+                        <a href=""><span><i class="fas fa-unlock-alt"></i></span> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -378,6 +378,25 @@
     <!--middle content wrapper-->
     <div class="middle_content_wrapper">
         <!-- counter_area -->
+          <!--alert-->
+          @if (Session::has('error'))
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{ session::get('error') }}</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          @endif
+          <!--alert-->
+          <!--login user details -->
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            User name:  <strong>{{ Auth::guard('admin')->user()->name }}</strong> <br/>
+            User email: <strong>{{ Auth::guard('admin')->user()->email }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+          <!--login user details -->
         <section class="counter_area">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
