@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="wrapper without_header_sidebar">
     <div class="content_wrapper">
         <!-- page content -->
         <div class="registration_page center_container">
@@ -53,5 +54,6 @@
         </div>
     </div>
     <!--/ content wrapper -->
+</div>
 
 @endsection

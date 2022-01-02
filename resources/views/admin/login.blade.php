@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="wrapper without_header_sidebar">
     <!-- contnet wrapper -->
     <div class="content_wrapper">
         <!-- page content -->
@@ -46,6 +47,7 @@
             </div>
         </div>
     </div>
+</div>
     <!--/ content wrapper -->
 
 @endsection
