@@ -21,7 +21,7 @@
                     </div>
                     @endif
                     <!--alert-->
-                    <form action="{{ route('admin.login') }}" class="d-block" method="POST">
+                    <form action="{{ route('seller.login') }}" class="d-block" method="POST">
                       @csrf
                         <div class="form-group icon_parent">
                             <label for="password">Email</label>

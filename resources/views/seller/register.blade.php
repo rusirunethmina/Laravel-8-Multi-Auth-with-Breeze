@@ -10,11 +10,11 @@
                 <div class="logo">
                     <img src="{{ asset('panel/assets/images/logo.png') }}" alt="" class="img-fluid">
                 </div>
-                <form action="{{ route('admin.register') }}" method="post">
+                <form action="{{ route('seller.register') }}" method="post">
                   @csrf
                     <div class="form-group icon_parent">
                         <label for="uname">Username</label>
-                        <input  type="text" class="form-control" name="name" value=" " 
+                        <input  type="text" class="form-control" name="name" value=" "
                             autocomplete="name" autofocus placeholder="Full Name">
 
                         <span class="icon_soon_bottom_right"><i class="fas fa-user"></i></span>
